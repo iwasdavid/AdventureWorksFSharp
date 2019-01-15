@@ -1,4 +1,4 @@
-module AdventureWorksFSharp.App
+module AdventureWorksFSharp.API.App
 
 open System
 open System.IO
@@ -28,7 +28,7 @@ module Views =
     let layout (content: XmlNode list) =
         html [] [
             head [] [
-                title []  [ encodedText "AdventureWorksFSharp" ]
+                title []  [ encodedText "AdventureWorksFSharp.API" ]
                 link [ _rel  "stylesheet"
                        _type "text/css"
                        _href "/main.css" ]
@@ -37,7 +37,7 @@ module Views =
         ]
 
     let partial () =
-        h1 [] [ encodedText "AdventureWorksFSharp" ]
+        h1 [] [ encodedText "AdventureWorksFSharp.API" ]
 
     let index (model : Message) =
         [
